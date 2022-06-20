@@ -25,7 +25,6 @@ namespace TechnicalTask.Controllers
         [HttpGet]
         public async Task<Result<List<Employee>>> GetEmployee()
         {
-            var a = _context.Employee.Where(a => a.Age == 25);
 
             Result<List<Employee>> allEmployee = new(true) {
                 ResponseObject = await _context.Employee.ToListAsync()
